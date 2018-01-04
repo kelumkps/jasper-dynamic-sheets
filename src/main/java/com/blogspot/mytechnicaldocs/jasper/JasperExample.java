@@ -54,7 +54,7 @@ public class JasperExample {
         configuration.setUserPassword("jasper");
         configuration.setOwnerPassword("reports");
         configuration.setPermissions(PdfWriter.ALLOW_COPY | PdfWriter.ALLOW_PRINTING);*/
-        /* Encryption */
+        /* Enable Encryption */
         exporter.setConfiguration(configuration);
 
         exporter.exportReport();

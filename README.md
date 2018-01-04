@@ -17,7 +17,7 @@ After cloning the project please follow below instructions to try the example.
 #### Command-Line Instructions
 
 * **Prerequisites:**
-    * Install the latest version of [Java](http//java.com) and [Maven](http://maven.apache.org/download.html). (Requires Java 1.8 or above)
+    * Install the latest version of [Java](https://java.com/) and [Maven](https://maven.apache.org/download.html). (Requires Java 1.8 or above)
     * You may need to set your `JAVA_HOME`.
 
 ```bash
