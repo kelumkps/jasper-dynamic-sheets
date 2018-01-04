@@ -24,9 +24,9 @@ public class JasperExample {
     private void generateReport() throws Exception {
         JasperReport report = JasperCompileManager.compileReport("src/main/resources/templates/base_template.jrxml");
         Map<String, Object> parameters = new HashMap<>();
-        parameters.put("templateDirectory", "src/main/resources/templates/");
-        parameters.put("customParameters", new HashMap<>());
-        JRDataSource ds = populateDataSource();
+        parameters.put("templateDirectory", "src/main/resources/templates/");   // Template location to access the sub report file
+        parameters.put("customParameters", new HashMap<>());   // You can pass any custom parameters to access inside jrxml
+        JRDataSource ds = populateDataSource();    // Populate the datasource in memory
 
         JasperPrint jasperPrint = JasperFillManager.fillReport(report, parameters, ds);
         String outputFile = "My_Report_" + LocalDate.now().toString();
