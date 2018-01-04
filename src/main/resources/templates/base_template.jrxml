@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="user_details_report" pageWidth="595" pageHeight="842" columnWidth="550" leftMargin="0"
+              rightMargin="0" topMargin="0" bottomMargin="0" uuid="763e4c9e-676b-4353-9e47-fdad94edcf8a">
+    <property name="com.jaspersoft.studio.unit." value="pixel"/>
+    <property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+    <property name="net.sf.jasperreports.export.xls.one.page.per.sheet" value="true"/>
+    <property name="net.sf.jasperreports.page.break.no.pagination" value="apply"/>
+    <property name="net.sf.jasperreports.export.xls.remove.empty.space.between.rows" value="true"/>
+    <property name="net.sf.jasperreports.export.xls.remove.empty.space.between.columns" value="true"/>
+    <property name="net.sf.jasperreports.export.xls.white.page.background" value="false"/>
+    <property name="net.sf.jasperreports.export.xls.detect.cell.type" value="true"/>
+    <property name="net.sf.jasperreports.export.xls.ignore.graphics" value="false"/>
+    <property name="net.sf.jasperreports.print.keep.full.text" value="true"/>
+    <property name="net.sf.jasperreports.exports.xls.font.size.fix.enabled" value="false"/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="customParameters" class="java.util.Map"/>
+    <parameter name="templateDirectory" class="java.lang.String"/>
+    <field name="SHEET_NAME" class="java.lang.String"/>
+    <field name="DATA_SOURCE" class="java.util.List"/>
+
+    <detail>
+        <band height="300" splitType="Stretch">
+            <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+            <subreport isUsingCache="false" runToBottom="false">
+                <reportElement x="0" y="0" width="600" height="200" uuid="22345c46-948d-435f-99de-dbec39e586e2">
+                    <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+                </reportElement>
+                <subreportParameter name="sheetName">
+                    <subreportParameterExpression><![CDATA[$F{SHEET_NAME}]]></subreportParameterExpression>
+                </subreportParameter>
+                <subreportParameter name="customParameters">
+                    <subreportParameterExpression><![CDATA[$P{customParameters}]]></subreportParameterExpression>
+                </subreportParameter>
+                <dataSourceExpression>
+                    <![CDATA[new net.sf.jasperreports.engine.data.JRMapArrayDataSource($F{DATA_SOURCE}.toArray())]]></dataSourceExpression>
+                <subreportExpression>
+                    <![CDATA[JasperCompileManager.compileReport($P{templateDirectory} + "/sheet_template.jrxml")]]></subreportExpression>
+            </subreport>
+            <break>
+                <reportElement x="0" y="299" width="138" height="1" uuid="c23c613d-444f-4b61-84f2-ee14d39df15c">
+                    <property name="net.sf.jasperreports.export.xls.break.after.row" value="true"/>
+                </reportElement>
+            </break>
+        </band>
+    </detail>
+</jasperReport>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="contact_information" pageWidth="595" pageHeight="842" columnWidth="170" leftMargin="0"
+              rightMargin="0" topMargin="0" bottomMargin="0" uuid="5b43d207-b777-4d0f-9834-f49baae34f14">
+    <property name="com.jaspersoft.studio.unit." value="pixel"/>
+    <property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+    <property name="net.sf.jasperreports.export.xls.one.page.per.sheet" value="false"/>
+    <property name="net.sf.jasperreports.export.xls.remove.empty.space.between.rows" value="true"/>
+    <property name="net.sf.jasperreports.export.xls.remove.empty.space.between.columns" value="true"/>
+    <property name="net.sf.jasperreports.export.xls.white.page.background" value="false"/>
+    <property name="net.sf.jasperreports.export.xls.detect.cell.type" value="true"/>
+    <property name="net.sf.jasperreports.export.xls.ignore.graphics" value="false"/>
+    <property name="net.sf.jasperreports.export.xls.freeze.row" value="2"/>
+    <property name="net.sf.jasperreports.print.keep.full.text" value="true"/>
+    <property name="net.sf.jasperreports.exports.xls.font.size.fix.enabled" value="false"/>
+    <property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="sheetName" class="java.lang.String"/>
+    <parameter name="customParameters" class="java.util.Map"/>
+    <field name="USER_NAME" class="java.lang.String"/>
+    <field name="FIRST_NAME" class="java.lang.String"/>
+    <field name="LAST_NAME" class="java.lang.String"/>
+    <field name="EMAIL" class="java.lang.String"/>
+    <field name="ADDRESS" class="java.lang.String"/>
+    <columnHeader>
+        <band height="30" splitType="Stretch">
+            <textField isStretchWithOverflow="true">
+                <reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0"
+                               width="100" height="30" backcolor="#FFCC99" uuid="4ca3fbc8-ed0e-4e3a-ae1f-4aa0ba8238c4">
+                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+                    <propertyExpression name="net.sf.jasperreports.export.xls.sheet.name">
+                        <![CDATA[$P{sheetName}]]></propertyExpression>
+                </reportElement>
+                <box>
+                    <pen lineWidth="0.5" lineColor="#420F0F"/>
+                </box>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["User Name"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="100" y="0"
+                               width="100" height="30" backcolor="#FFCC99" uuid="abfd7ce0-043d-4421-b7ab-f4f75b1e5770">
+                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                </reportElement>
+                <box>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["First Name"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="200" y="0"
+                               width="100" height="30" backcolor="#FFCC99" uuid="e5d31a27-6a20-4cd3-8be7-1639e4c5b2ba">
+                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                </reportElement>
+                <box>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Last Name"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="300" y="0"
+                               width="100" height="30" backcolor="#FFCC99" uuid="4ccdb9d9-2c4f-4807-9244-9e2cc9617b47">
+                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                </reportElement>
+                <box>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Email Address"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="400" y="0"
+                               width="100" height="30" backcolor="#FFCC99" uuid="d1916df1-d770-43b5-801f-2642a098c73f">
+                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                </reportElement>
+                <box>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Address"]]></textFieldExpression>
+            </textField>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="16" splitType="Stretch">
+            <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+            <textField isStretchWithOverflow="true">
+                <reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="0"
+                               width="100" height="16" uuid="57970db8-b1ec-47ae-80d8-faa7166ff997">
+                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+                </reportElement>
+                <box>
+                    <pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression>
+                    <![CDATA[$F{USER_NAME} != null ? $F{USER_NAME}.toLowerCase() : ""]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="100" y="0"
+                               width="100" height="16" uuid="b1209e91-ba29-4641-8ee3-80ba12fbe253">
+                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+                </reportElement>
+                <box>
+                    <pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression>
+                    <![CDATA[$F{FIRST_NAME} != null ? $F{FIRST_NAME} : ""]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="200" y="0"
+                               width="100" height="16" uuid="c3b5a09b-f26e-4a26-89a6-666643791027">
+                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+                </reportElement>
+                <box>
+                    <pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression>
+                    <![CDATA[$F{LAST_NAME} != null ? $F{LAST_NAME} : ""]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="300" y="0"
+                               width="100" height="16" uuid="2731a4de-a446-4ccf-be4c-c383cb73c6dd">
+                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+                </reportElement>
+                <box>
+                    <pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression>
+                    <![CDATA[$F{EMAIL} != null ? $F{EMAIL} : ""]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="400" y="0"
+                               width="100" height="16" uuid="7b7edc47-3b30-4330-bf02-b9896f084eac">
+                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+                </reportElement>
+                <box>
+                    <pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression><![CDATA[$F{ADDRESS} != null ? $F{ADDRESS} : ""]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>
