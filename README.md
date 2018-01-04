@@ -26,3 +26,4 @@ cd jasper-dynamic-sheets
 mvn clean compile
 mvn exec:java
 ```
+After executing above commands without eny errors, you can find the generated reports files under project's base directory with file name in the format of ```My_Report_<YYYY-MM-DD>.<extension>```
