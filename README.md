@@ -9,6 +9,9 @@ This project also demonstrates on how to generate a Jasper report from below for
 * MS PowerPoint (.pptx)
 * CSV (.csv)
 
+Refer below posts for detailed explanation about the source code.
+* [JasperReports in Java - Tips for exporting to different file formats](https://mytechnicaldocs.blogspot.sg/2018/01/jasperreports-in-java-tips-for.html)
+* [JasperReports in Java - Add sheets dynamically](https://mytechnicaldocs.blogspot.sg/2018/01/jasperreports-in-java-add-sheets.html)
 
 ## Build & Run The Example
 
