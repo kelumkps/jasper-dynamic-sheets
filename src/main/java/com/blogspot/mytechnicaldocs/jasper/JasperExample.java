@@ -22,7 +22,8 @@ public class JasperExample {
     }
 
     private void generateReport() throws Exception {
-        JasperReport report = JasperCompileManager.compileReport("src/main/resources/templates/base_template.jrxml");
+        //JasperReport report = JasperCompileManager.compileReport("src/main/resources/templates/base_template.jrxml"); //Template with just dynamic sheets
+        JasperReport report = JasperCompileManager.compileReport("src/main/resources/templates/dc_base_template.jrxml"); //Template with dynamic show/hide columns
         Map<String, Object> parameters = new HashMap<>();
         parameters.put("templateDirectory", "src/main/resources/templates/");   // Template location to access the sub report file
         parameters.put("customParameters", new HashMap<>());   // You can pass any custom parameters to access inside jrxml
@@ -142,6 +143,18 @@ public class JasperExample {
         Map<String, Object> sheet = new HashMap<>();
         sheet.put("SHEET_NAME", "My Sheet 0" + sheetNumber);
         sheet.put("DATA_SOURCE", sheetData);
+        sheet.put("SHOW_COLUMNS", createShowColumnMap());
         return sheet;
+    }
+
+    private Map<String, Object> createShowColumnMap() {
+        Map<String, Object> showColumns = new HashMap<>();
+        Random random = new Random();
+        showColumns.put("showUsername", true);
+        showColumns.put("showFirstName", random.nextBoolean());
+        showColumns.put("showLastName", random.nextBoolean());
+        showColumns.put("showEmail", random.nextBoolean());
+        showColumns.put("showAddress", true);
+        return showColumns;
     }
 }

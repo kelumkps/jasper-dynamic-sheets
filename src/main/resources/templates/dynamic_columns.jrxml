@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="contact_information" pageWidth="595" pageHeight="842" columnWidth="170" leftMargin="0"
+              rightMargin="0" topMargin="0" bottomMargin="0" uuid="5b43d207-b777-4d0f-9834-f49baae34f14">
+    <property name="com.jaspersoft.studio.unit." value="pixel"/>
+    <property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+    <property name="net.sf.jasperreports.export.xls.one.page.per.sheet" value="false"/>
+    <property name="net.sf.jasperreports.export.xls.remove.empty.space.between.rows" value="true"/>
+    <property name="net.sf.jasperreports.export.xls.remove.empty.space.between.columns" value="true"/>
+    <property name="net.sf.jasperreports.export.xls.white.page.background" value="false"/>
+    <property name="net.sf.jasperreports.export.xls.detect.cell.type" value="true"/>
+    <property name="net.sf.jasperreports.export.xls.ignore.graphics" value="false"/>
+    <property name="net.sf.jasperreports.export.xls.freeze.row" value="2"/>
+    <property name="net.sf.jasperreports.print.keep.full.text" value="true"/>
+    <property name="net.sf.jasperreports.exports.xls.font.size.fix.enabled" value="false"/>
+    <property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <style name="Sans_Normal" isDefault="true" fontName="DejaVu Sans" fontSize="10" isBold="false" isItalic="false"
+           isUnderline="false" isStrikeThrough="false"/>
+    <style name="Table">
+        <box>
+            <pen lineWidth="1.0" lineColor="#FF0000"/>
+        </box>
+    </style>
+    <style name="TableHeader" backcolor="#FFCC99" mode="Opaque">
+        <box>
+            <topPen lineWidth="0.5"/>
+            <leftPen lineWidth="0.5"/>
+            <bottomPen lineWidth="0.5"/>
+            <rightPen lineWidth="0.5"/>
+        </box>
+    </style>
+    <style name="TableColumn" mode="Opaque">
+        <box>
+            <topPen lineWidth="0.5"/>
+            <leftPen lineWidth="0.5"/>
+            <bottomPen lineWidth="0.5"/>
+            <rightPen lineWidth="0.5"/>
+        </box>
+    </style>
+    <subDataset name="TableData" uuid="84132ed1-55f6-4dac-a00e-4f48a345a893">
+        <field name="USER_NAME" class="java.lang.String"/>
+        <field name="FIRST_NAME" class="java.lang.String"/>
+        <field name="LAST_NAME" class="java.lang.String"/>
+        <field name="EMAIL" class="java.lang.String"/>
+        <field name="ADDRESS" class="java.lang.String"/>
+    </subDataset>
+    <parameter name="customParameters" class="java.util.Map"/>
+    <parameter name="showUsername" class="java.lang.Boolean">
+        <defaultValueExpression><![CDATA[new Boolean(true)]]></defaultValueExpression>
+    </parameter>
+    <parameter name="showFirstName" class="java.lang.Boolean">
+        <defaultValueExpression><![CDATA[new Boolean(true)]]></defaultValueExpression>
+    </parameter>
+    <parameter name="showLastName" class="java.lang.Boolean">
+        <defaultValueExpression><![CDATA[new Boolean(true)]]></defaultValueExpression>
+    </parameter>
+    <parameter name="showEmail" class="java.lang.Boolean">
+        <defaultValueExpression><![CDATA[new Boolean(true)]]></defaultValueExpression>
+    </parameter>
+    <parameter name="showAddress" class="java.lang.Boolean">
+        <defaultValueExpression><![CDATA[new Boolean(true)]]></defaultValueExpression>
+    </parameter>
+    <parameter name="sheetName" class="java.lang.String"/>
+    <title>
+        <band height="30">
+            <componentElement>
+                <reportElement stretchType="ElementGroupHeight" x="0" y="0" width="555" height="30"
+                               uuid="30599ddf-b876-44d1-bf69-2d361caf4d92">
+                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+                </reportElement>
+                <c:table xmlns:c="http://jasperreports.sourceforge.net/jasperreports/components"
+                         xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+                    <datasetRun subDataset="TableData">
+                        <dataSourceExpression><![CDATA[$P{REPORT_DATA_SOURCE}]]></dataSourceExpression>
+                    </datasetRun>
+                    <c:column width="100">
+                        <printWhenExpression><![CDATA[new Boolean($P{showUsername})]]></printWhenExpression>
+                        <c:columnHeader style="TableHeader" height="15">
+                            <textField>
+                                <reportElement positionType="Float" stretchType="RelativeToTallestObject"
+                                               x="0" y="0"
+                                               width="100" height="15" uuid="abfd7ce0-043d-4421-b7ab-f4f75b1e5770">
+                                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                                </reportElement>
+                                <textElement>
+                                    <font isBold="true"/>
+                                </textElement>
+                                <textFieldExpression><![CDATA["Username"]]></textFieldExpression>
+                            </textField>
+                        </c:columnHeader>
+                        <c:detailCell style="TableColumn" height="15">
+                            <textField isStretchWithOverflow="true">
+                                <reportElement positionType="Float" stretchType="RelativeToBandHeight"
+                                               x="0" y="0"
+                                               width="100" height="15" uuid="b1209e91-ba29-4641-8ee3-80ba12fbe253">
+                                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                                    <property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+                                    <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+                                </reportElement>
+                                <textFieldExpression><![CDATA[$F{USER_NAME}]]></textFieldExpression>
+                            </textField>
+                        </c:detailCell>
+                    </c:column>
+                    <c:column width="100">
+                        <printWhenExpression><![CDATA[new Boolean($P{showFirstName})]]></printWhenExpression>
+                        <c:columnHeader style="TableHeader" height="15">
+                            <textField>
+                                <reportElement positionType="Float" stretchType="RelativeToTallestObject"
+                                               x="0" y="0"
+                                               width="100" height="15" uuid="abfd7ce0-043d-4421-b7ab-f4f75b1e5770">
+                                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                                </reportElement>
+                                <textElement>
+                                    <font isBold="true"/>
+                                </textElement>
+                                <textFieldExpression><![CDATA["First Name"]]></textFieldExpression>
+                            </textField>
+                        </c:columnHeader>
+                        <c:detailCell style="TableColumn" height="15">
+                            <textField isStretchWithOverflow="true">
+                                <reportElement positionType="Float" stretchType="RelativeToBandHeight"
+                                               x="0" y="0"
+                                               width="100" height="15" uuid="b1209e91-ba29-4641-8ee3-80ba12fbe253">
+                                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                                    <property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+                                    <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+                                </reportElement>
+                                <textFieldExpression><![CDATA[$F{FIRST_NAME}]]></textFieldExpression>
+                            </textField>
+                        </c:detailCell>
+                    </c:column>
+                    <c:column width="100">
+                        <printWhenExpression><![CDATA[new Boolean($P{showLastName})]]></printWhenExpression>
+                        <c:columnHeader style="TableHeader" height="15">
+                            <textField>
+                                <reportElement positionType="Float" stretchType="RelativeToTallestObject"
+                                               x="0" y="0"
+                                               width="100" height="15" uuid="abfd7ce0-043d-4421-b7ab-f4f75b1e5770">
+                                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                                </reportElement>
+                                <textElement>
+                                    <font isBold="true"/>
+                                </textElement>
+                                <textFieldExpression><![CDATA["Last Name"]]></textFieldExpression>
+                            </textField>
+                        </c:columnHeader>
+                        <c:detailCell style="TableColumn" height="15">
+                            <textField isStretchWithOverflow="true">
+                                <reportElement positionType="Float" stretchType="RelativeToBandHeight"
+                                               x="0" y="0"
+                                               width="100" height="15" uuid="b1209e91-ba29-4641-8ee3-80ba12fbe253">
+                                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                                    <property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+                                    <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+                                </reportElement>
+                                <textFieldExpression><![CDATA[$F{LAST_NAME}]]></textFieldExpression>
+                            </textField>
+                        </c:detailCell>
+                    </c:column>
+                    <c:column width="100">
+                        <printWhenExpression><![CDATA[new Boolean($P{showEmail})]]></printWhenExpression>
+                        <c:columnHeader style="TableHeader" height="15">
+                            <textField>
+                                <reportElement positionType="Float" stretchType="RelativeToTallestObject"
+                                               x="0" y="0"
+                                               width="100" height="15" uuid="abfd7ce0-043d-4421-b7ab-f4f75b1e5770">
+                                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                                </reportElement>
+                                <textElement>
+                                    <font isBold="true"/>
+                                </textElement>
+                                <textFieldExpression><![CDATA["Email"]]></textFieldExpression>
+                            </textField>
+                        </c:columnHeader>
+                        <c:detailCell style="TableColumn" height="15">
+                            <textField isStretchWithOverflow="true">
+                                <reportElement positionType="Float" stretchType="RelativeToBandHeight"
+                                               x="0" y="0"
+                                               width="100" height="15" uuid="b1209e91-ba29-4641-8ee3-80ba12fbe253">
+                                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                                    <property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+                                    <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+                                </reportElement>
+                                <textFieldExpression><![CDATA[$F{EMAIL}]]></textFieldExpression>
+                            </textField>
+                        </c:detailCell>
+                    </c:column>
+                    <c:column width="100">
+                        <printWhenExpression><![CDATA[new Boolean($P{showAddress})]]></printWhenExpression>
+                        <c:columnHeader style="TableHeader" height="15">
+                            <textField>
+                                <reportElement positionType="Float" stretchType="RelativeToTallestObject"
+                                               x="0" y="0"
+                                               width="100" height="15" uuid="abfd7ce0-043d-4421-b7ab-f4f75b1e5770">
+                                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                                </reportElement>
+                                <textElement>
+                                    <font isBold="true"/>
+                                </textElement>
+                                <textFieldExpression><![CDATA["Address"]]></textFieldExpression>
+                            </textField>
+                        </c:columnHeader>
+                        <c:detailCell style="TableColumn" height="15">
+                            <textField isStretchWithOverflow="true">
+                                <reportElement positionType="Float" stretchType="RelativeToBandHeight"
+                                               x="0" y="0"
+                                               width="100" height="15" uuid="b1209e91-ba29-4641-8ee3-80ba12fbe253">
+                                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                                    <property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+                                    <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+                                </reportElement>
+                                <textFieldExpression><![CDATA[$F{ADDRESS}]]></textFieldExpression>
+                            </textField>
+                        </c:detailCell>
+                    </c:column>
+                </c:table>
+            </componentElement>
+        </band>
+    </title>
+    <columnHeader>
+        <band height="0" splitType="Stretch">
+            <textField isStretchWithOverflow="true">
+                <reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0"
+                               width="0" height="0" uuid="eb8e4ea5-1cec-4c03-822c-52dbb257948c">
+                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+                    <property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+                    <propertyExpression name="net.sf.jasperreports.export.xls.sheet.name">
+                        <![CDATA[$P{sheetName}]]></propertyExpression>
+                </reportElement>
+            </textField>
+        </band>
+    </columnHeader>
+</jasperReport>
